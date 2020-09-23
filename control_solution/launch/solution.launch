@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find car_simulation)/launch/ros_assignment.launch"/> 
+    <node pkg="opencv_solution" type="opencv_solution_node" name="opencv_solution"/>
+    <node pkg="pcl_solution" type="pcl_solution_node" name="pcl_solution"/>
+    <node pkg="control_solution" type="control_solution_node" name="control_solution" output="screen"/>
+    <node pkg="detection_3d_to_markers" type="detection_3d_to_markers_node" name="detection_3d_to_markers"/>
+</launch>
