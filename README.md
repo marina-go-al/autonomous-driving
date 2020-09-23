@@ -2,34 +2,9 @@
 
 ## Table of Contents
 
-* [Compilation and execution](#compilation-and-execution)
 * [Sneak peek](#sneak-peek)
 * [Brief explanation](#brief-explanation)
 * [Final comments](#final-comments)
-
-## Compilation and execution
-
-To compile the code, follow the instructions proposed in the *3. Requirements for the solution* of the manual. This is, open a new terminal, run singularity and do:
-
-```
-source /opt/ros/kinetic/setup.bash
-cd ~
-mkdir -p catkin_ws/src
-cd catkin_ws/src
-catkin_init_workspace
-git clone git@gitlab.me41025.3me.tudelft.nl:students-1920/lab4/group27.git 
-git clone git@gitlab.me41025.3me.tudelft.nl:students-1920/me41025_simulator.git
-cd ..
-catkin_make
-source devel/setup.bash
-roslaunch control_solution solution.launch
-```
-
-In case that you are not working with an SSH key, substitute the previous *git clone* steps by:
-```
-git clone https://gitlab.me41025.3me.tudelft.nl/students-1920/lab4/group27.git
-git clone https://gitlab.me41025.3me.tudelft.nl/students-1920/me41025_simulator.git
-```
 
 ## Sneak peek
 
@@ -65,8 +40,6 @@ Concretely, a brief summary of what the `opencv_solution` node is doing is:
 
 For more details on how the class of the specific member functions of the class work, please refer to the corresponding file of the three C++ files stated above.
 
-**[Note]: *This package was primarily Marina's responsibility.***
-
 ### PCL
 
 The `pcl_solution` package constains the node `pcl_solution` to detect 3D bounding boxes of all barrels in the lidar pointcloud using PCL (as instructed in the manual).
@@ -88,8 +61,6 @@ Concretely, a brief summary of what the `pcl_solution` node is doing is:
 5. Publishes this information on the */pcl_solution_node/detections* topic
 
 For more details on how the class of the specific member functions of the class work, please refer to the corresponding file of the three C++ files stated above.
-
-**[Note]: *This package was primarily Hilda's responsibility.***
 
 ### Control
 
@@ -118,9 +89,7 @@ Concretely, a brief summary of what the `control_solution` node is doing is:
 
 For more details on how the class of the specific member functions of the class work, please refer to the corresponding file of the three C++ files stated above.
 
-**[Note]: *This package was primarily Marina's responsibility.***
-
 ## Final comments
 
 * All the files have been thoroughly commented out, so that the taken approach can be easily understood and is well documented.
-* We have tried to code the scripts in the most organized way possible following the lecture recommendations.
+* I have tried to code the scripts in the most organized way possible following the lecture recommendations.
